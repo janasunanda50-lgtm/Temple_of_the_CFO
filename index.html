@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- saved from url=(0183)file:///C:/Users/Sunanda%20Jana/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/LocalState/sessions/00A90FE3242B4CADE7091EB37B44847588676E0C/transfers/2026-40/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Temple of the CFO – Escape Game</title>
+<style>
+:root{--bg:#1b0f3a;--card:#2a1a5a;--ink:#fff7e6;--acc:#ffb703;--pink:#ff5d8f;--teal:#2ec4b6;--mut:#c9b8ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;background:linear-gradient(#1b0f3a,#4b1d7a 60%,#ff7a59);background-attachment:fixed;color:var(--ink);min-height:100vh}
+#app{max-width:640px;margin:auto;padding:14px}
+h1{font-size:2rem;margin:6px 0;text-align:center;background:linear-gradient(90deg,#ffb703,#ff5d8f,#2ec4b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card{background:var(--card);border:2px solid #ffffff22;border-radius:22px;padding:18px;margin:12px 0;box-shadow:0 8px 30px #0006}
+.sub{color:var(--mut);text-align:center;margin:0 0 8px}
+input,select{width:100%;padding:12px;margin:5px 0;border-radius:12px;border:2px solid #ffffff33;background:#1b0f3a;color:var(--ink);font-size:1rem}
+label{font-size:.85rem;color:var(--mut)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+button{cursor:pointer;font:inherit;font-weight:700;border:0;border-radius:16px;padding:13px 18px;color:#2b1200;background:linear-gradient(90deg,#ffb703,#ff8fab);box-shadow:0 5px 0 #b3590055;transition:transform .1s}
+button:active{transform:translateY(3px)}
+.big{width:100%;font-size:1.1rem;margin-top:10px}
+.opt{display:block;width:100%;text-align:left;margin:9px 0;background:#3b2780;color:var(--ink);box-shadow:0 4px 0 #0005;border:2px solid #ffffff22}
+.opt:hover{background:#4d33a3}
+.opt.good{background:#138a5b}.opt.mid{background:#b8860b}.opt.bad{background:#a3203f}
+.scene{position:relative;height:170px;border-radius:22px;overflow:hidden;background:linear-gradient(#ff9a8b,#ffd27a 70%);border:2px solid #ffffff33}
+.sun{position:absolute;right:30px;top:18px;width:46px;height:46px;border-radius:50%;background:#fff3b0;box-shadow:0 0 30px #fff3b0}
+.mt{position:absolute;bottom:38px;left:0;width:200%;height:70px;background:repeating-linear-gradient(90deg,transparent 0 40px,#7b2d8e 40px 41px);opacity:.9;animation:slide 14s linear infinite;clip-path:polygon(0 100%,5% 20%,10% 100%,18% 40%,26% 100%,34% 10%,42% 100%,50% 100%,55% 30%,60% 100%,68% 15%,76% 100%,84% 45%,92% 100%,100% 100%);background:#7b2d8e}
+.mt2{height:45px;background:#4b1d7a;animation-duration:7s;bottom:30px}
+.ground{position:absolute;bottom:0;left:0;right:0;height:40px;background:repeating-linear-gradient(90deg,#6b3a1e 0 30px,#8a4b27 30px 60px);background-size:60px 100%;animation:gslide .6s linear infinite}
+.runner{position:absolute;bottom:34px;left:12%;font-size:2.4rem;animation:bob .35s ease-in-out infinite alternate;transition:left .9s}
+.gate{position:absolute;bottom:34px;right:8%;font-size:2.6rem}
+.gem{position:absolute;font-size:1.3rem;animation:float 2s ease-in-out infinite}
+@keyframes slide{to{transform:translateX(-50%)}}@keyframes gslide{to{background-position:-60px 0}}
+@keyframes bob{from{transform:scaleX(-1)}to{transform:scaleX(-1) translateY(-12px)}}@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.shake{animation:shake .4s}
+.hud{display:flex;justify-content:space-between;align-items:center;font-size:1.3rem}
+.track{display:flex;gap:6px;margin:8px 0}.stone{flex:1;height:12px;border-radius:8px;background:#ffffff22}.stone.on{background:linear-gradient(90deg,#2ec4b6,#ffb703)}
+.bar{height:20px;border-radius:12px;background:#ffffff1c;overflow:hidden;margin:4px 0 12px}.bar i{display:block;height:100%;width:0;border-radius:12px;transition:width 1.5s}
+.tag{display:inline-block;background:#ffffff1f;border-radius:20px;padding:3px 12px;font-size:.8rem;color:var(--mut)}
+.fb{padding:10px 12px;border-radius:12px;background:#ffffff14;margin-top:10px}
+table{width:100%;border-collapse:collapse;font-size:.8rem}td,th{padding:5px;border-bottom:1px solid #ffffff22;text-align:left}
+.wrap{overflow-x:auto}.fix{position:fixed;top:calc(env(safe-area-inset-top,0px) + 8px);right:10px;z-index:9;padding:8px 12px}
+.hide{display:none}
+.timerBox{margin:8px 0 12px;padding:10px 12px;border-radius:14px;background:#ffffff14;border:1px solid #ffffff22}
+.timerTop{display:flex;justify-content:space-between;font-weight:800}
+.timerBar{height:10px;border-radius:8px;background:#ffffff20;overflow:hidden;margin-top:7px}
+.timerBar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#2ec4b6,#ffb703,#ff5d8f);transition:width .2s linear}
+.analysisGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.metric{background:#ffffff10;border-radius:14px;padding:10px}
+.metric b{display:block;margin-bottom:4px}
+.pill{display:inline-block;padding:4px 9px;border-radius:12px;background:#ffffff16;margin:3px 3px 0 0;font-size:.78rem}
+</style></head><body>
+<button class="fix" id="mute" aria-label="sound">🔊</button>
+<div id="app"><h1>😵 The guardian caught you!</h1><div class="scene" id="sc"><div class="sun"></div><div class="mt"></div><div class="mt mt2"></div><span class="gem" style="left:40%;top:40px">💎</span><span class="gem" style="left:62%;top:60px;animation-delay:.6s">🪙</span><div class="ground"></div><div class="runner" id="rn" style="left:20%">🏃</div><div class="gate">🗿</div></div>
+<div class="card" style="text-align:center"><div style="font-size:1.6rem;font-weight:800">👑 Future CFO Material</div><p>You balance people leadership with sharp financial judgement and ethics.</p><p>💎💎💎</p></div>
+<div class="card"><b>🧠 Organizational behaviour</b> <span class="tag">Excellent</span><div class="bar"><i id="b1" style="background: linear-gradient(90deg, rgb(46, 196, 182), rgb(155, 246, 255)); width: 100%;"></i></div>
+<b>💰 Financial management</b> <span class="tag">Excellent</span><div class="bar"><i id="b2" style="background: linear-gradient(90deg, rgb(46, 196, 182), rgb(155, 246, 255)); width: 100%;"></i></div>
+<p>Flawless run: every gate unlocked with a gem!</p></div>
+<div class="card" id="sv">🎮 Result ready. (Central recording needs the host to give you contributor access.)</div><button class="big" id="again">Play again 🔁</button></div>
+<script>
+const $=s=>document.querySelector(s),app=$('#app');
+const SHEET_URL='https://script.google.com/macros/s/AKfycbyOG9pufkqEoOpdO8H-ZFCc0m3q3nvjlHoBDMYymmB2Kz0JLche6wpktfmvu8YObeBa/exec';let P={},st={},sound=true,AC=null,db=null,usr=null,bgT=null;
+/* ---------- sound ---------- */
+function tone(f,d=.15,t='sine',v=.12,at=0){if(!sound)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=t;o.frequency.value=f;g.gain.value=v;o.connect(g);g.connect(AC.destination);const s=AC.currentTime+at;g.gain.exponentialRampToValueAtTime(.001,s+d);o.start(s);o.stop(s+d)}catch(e){}}
+const sfx={click:()=>tone(520,.08,'square',.06),gem:()=>[660,880,1320].forEach((f,i)=>tone(f,.18,'triangle',.12,i*.09)),hurt:()=>{tone(180,.3,'sawtooth',.12);tone(120,.4,'sawtooth',.1,.1)},ok:()=>tone(520,.2,'triangle'),win:()=>[523,659,784,1047,1319].forEach((f,i)=>tone(f,.3,'triangle',.14,i*.13)),run:()=>[300,360,300,360].forEach((f,i)=>tone(f,.07,'square',.04,i*.1))};
+function bg(on){clearInterval(bgT);if(!on||!sound)return;const n=[262,330,392,330,294,370,440,370];let i=0;bgT=setInterval(()=>tone(n[i++%8],.4,'sine',.035),420)}
+$('#mute').onclick=()=>{sound=!sound;$('#mute').textContent=sound?'🔊':'🔇';bg(sound&&st.playing)};
+/* ---------- content ---------- */
+const GATES=[
+{icon:'🔥',name:'The Burnout Bridge',t:'ob',topic:'Motivation & Workload',q:'Your finance team missed the month-end close because everyone is exhausted. The bridge ahead is crumbling. What do you do?',o:[
+['Thank the team, find the bottlenecks causing the overload, and rebalance the work.',2,'Great: you fix root causes and respect people (Herzberg and Expectancy ideas).'],
+['Praise them in a meeting but change nothing in the process.',1,'Recognition helps, but without fixing the system burnout returns.'],
+['Demand extra hours until the backlog is gone.',0,'Pressure without support damages morale and accuracy.']]},
+{icon:'💧',name:'The Cash River',t:'fin',topic:'Working Capital',q:'Customers pay late while suppliers want quick payment. The river of cash is running dry. How do you cross?',o:[
+['Tighten collections, negotiate supplier terms, and arrange a short-term credit line as a bridge.',2,'Smart: you manage the whole cash cycle with liquidity back-up.'],
+['Cut every expense, including training and marketing, immediately.',1,'Saves cash today but can hurt growth and capability.'],
+['Delay all supplier payments quietly.',0,'This breaks trust and can choke your supply chain.']]},
+{icon:'⚔️',name:'The Rival Guardians',t:'ob',topic:'Conflict Management',q:'Sales and Operations heads clash fiercely over who approves customer discounts. Both block your path.',o:[
+['Bring them together and design shared approval rules with profit guardrails.',2,'Collaborating, a win-win conflict style, builds lasting solutions.'],
+['Pass it up to the CEO to decide.',1,'Escalation works sometimes but avoids building your own leadership.'],
+['Side with whoever is louder.',0,'Favouritism breeds politics and resentment.']]},
+{icon:'💎',name:'The Twin Treasure Doors',t:'fin',topic:'Capital Budgeting & Risk',q:'Door one holds a flashy project with uncertain returns. Door two holds a plain project with proven returns. Funds fit only one.',o:[
+['Compare risk-adjusted returns, test different scenarios, and fund in stages.',2,'Exactly how a CFO weighs return against risk.'],
+['Pick the cheaper project to be safe.',1,'Cost matters, but value created matters more.'],
+['Pick the flashy one because leadership loves it.',0,'Decisions should follow evidence, not excitement.']]},
+{icon:'🗿',name:'The Whispering Idol',t:'ob',topic:'Ethics & Integrity',q:'The CEO quietly asks you to push a big loss into next quarter to look good. The idol watches your choice.',o:[
+['Respectfully refuse, offer honest alternatives, and escalate to the audit committee if needed.',2,'Integrity is the CFO’s most valuable asset.'],
+['Comply once, but keep a written record.',1,'Documenting helps you, but it still bends the truth.'],
+['Comply silently to keep the peace.',0,'This is how scandals start.']]},
+{icon:'🏛️',name:'The Final Gate',t:'fin',topic:'Capital Structure',q:'To fund expansion you must choose how to raise money. The last gate to freedom is locked.',o:[
+['Use a balanced mix of debt and equity that suits asset life and risk comfort.',2,'A balanced structure protects both flexibility and returns.'],
+['Take only debt because it is cheaper.',1,'Cheap now, but heavy debt raises distress risk.'],
+['Accept whichever investor says yes fastest.',0,'Speed without fit can cost control and value.']]},{icon:'🧭',name:'The Compass Cave',t:'ob',topic:'Leadership Style',q:'A new analyst is talented but unsure. Your team is in a rush. How do you guide them through the dark cave?',o:[
+['Match your style to their readiness: coach closely at first, then delegate as confidence grows.',2,'Situational leadership: adapt to the person, not one fixed style.'],
+['Let them figure it out alone to build toughness.',1,'Freedom helps some people, but a newcomer needs direction first.'],
+['Take over their tasks to guarantee speed.',0,'Doing it for them kills growth and ownership.']]},
+{icon:'📊',name:'The Budget Bats',t:'fin',topic:'Budget Variance',q:'Halfway through the year, spending in one department is far above budget. Bats swarm around you.',o:[
+['Investigate the causes with the department head, separate one-offs from trends, and reforecast.',2,'Variance analysis finds the why before acting.'],
+['Freeze the department’s budget immediately.',1,'Control helps, but a blind freeze may stall useful work.'],
+['Ignore it; the year-end numbers will balance out.',0,'Small leaks become big floods when ignored.']]},
+{icon:'🤝',name:'The Team Totem',t:'ob',topic:'Teamwork & Communication',q:'Your cross-functional team keeps missing deadlines because members assume others are updating the plan.',o:[
+['Clarify roles, set a shared tracker and short regular check-ins.',2,'Clear roles and communication cure social loafing.'],
+['Send a stern email reminding everyone to be responsible.',1,'Reminders help briefly but do not fix the structure.'],
+['Take over the plan yourself and update it nightly.',0,'You become the bottleneck and the team stays dependent.']]},
+{icon:'🪙',name:'The Dividend Dragon',t:'fin',topic:'Dividend & Retention Policy',q:'Shareholders want a bigger payout, yet the company has strong growth projects waiting. The dragon wants gold.',o:[
+['Balance both: fund profitable projects first, pay a steady dividend from what remains, and explain the logic.',2,'Retain when returns beat shareholders’ alternatives, and communicate clearly.'],
+['Pay the highest dividend to keep shareholders happy.',1,'Pleasing owners today can starve tomorrow’s growth.'],
+['Skip dividends entirely without telling anyone.',0,'Silence erodes investor trust.']]},
+{icon:'🔄',name:'The Change Chasm',t:'ob',topic:'Managing Change',q:'You are rolling out a new finance system. Staff are anxious and some are quietly resisting. A chasm blocks the way.',o:[
+['Explain the why, involve staff early, train them, and pilot with a friendly group.',2,'Lewin and Kotter: build urgency, involve people, and make wins visible.'],
+['Announce a firm deadline and enforce it.',1,'Clear deadlines help, but force alone breeds quiet resistance.'],
+['Postpone until everyone feels comfortable.',0,'Waiting for total comfort means never changing.']]},
+{icon:'🌍',name:'The Currency Storm',t:'fin',topic:'Foreign Exchange Risk',q:'Your company will receive a big payment in a foreign currency in a few months. Storm clouds of exchange-rate swings gather.',o:[
+['Hedge a sensible part using forward contracts and keep the policy written and reviewed.',2,'Hedging protects margins while a policy prevents speculation.'],
+['Wait and hope the rate moves in your favour.',0,'That is speculation, not risk management.'],
+['Refuse all foreign business to avoid the risk.',1,'Safe, but you give up growth opportunities.']]},
+{icon:'⚖️',name:'The Fairness Scales',t:'ob',topic:'Performance Appraisal & Equity',q:'Two team members delivered similar results, but one is your favourite and expects a larger reward. The scales wobble.',o:[
+['Use clear, shared criteria, reward by results and explain decisions openly.',2,'Equity theory: people accept outcomes they see as fair.'],
+['Reward your favourite, since you know them best.',0,'Bias destroys trust and motivation.'],
+['Give both the same minimal reward to avoid discussion.',1,'Avoids conflict but ignores real differences in contribution.']]},
+{icon:'🔐',name:'The Vault of Controls',t:'fin',topic:'Internal Controls & Fraud Risk',q:'You discover that one employee both approves and releases supplier payments. The vault door is wide open.',o:[
+['Separate duties, add review and approval steps, and monitor exceptions regularly.',2,'Segregation of duties is the first line of fraud defence.'],
+['Trust the employee because they have always been honest.',0,'Controls protect honest people too.'],
+['Fire the employee immediately.',1,'Action without investigation is unfair and does not fix the system.']]},
+{icon:'🧠',name:'The Mirror Maze',t:'ob',topic:'Decision Biases',q:'Your team has already spent heavily on a project that is now clearly failing, but everyone says "we cannot stop now." Mirrors multiply the doubt.',o:[
+['Judge only future costs and benefits, set stop criteria, and be willing to cancel.',2,'Avoid the sunk-cost trap and escalation of commitment.'],
+['Keep funding to prove the early decision was right.',0,'Past spending cannot be recovered by throwing more at it.'],
+['Reduce funding slowly without making a decision.',1,'A half-measure prolongs the loss.']]}
+
+];
+const shuf=a=>a.map(x=>[Math.random(),x]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+/* ---------- screens ---------- */
+function scene(msg,left){return`<div class="scene" id="sc"><div class="sun"></div><div class="mt"></div><div class="mt mt2"></div><span class="gem" style="left:40%;top:40px">💎</span><span class="gem" style="left:62%;top:60px;animation-delay:.6s">🪙</span><div class="ground"></div><div class="runner" id="rn" style="left:${left||12}%">🏃</div><div class="gate">${msg||'🚪'}</div></div>`}
+function home(){cancelAnimationFrame(raf);document.onkeydown=null;st={};bg(false);app.innerHTML=`<h1>🗝️ Temple of the CFO</h1><p class="sub">Escape the ancient temple. Prove you can lead people and money.</p>${scene('🏛️')}
+<div class="card"><b>🎮 How to play</b><ol style="padding-left:20px;line-height:1.6;margin:8px 0 0">
+<li>Fill in your details and enter the temple.</li><li>Run forward through the temple: tap, press Space or ↑ to jump over 🪨 and 🐍 and grab 🪙.</li><li>Fifteen guarded gates block the path. Each gives a real workplace challenge.</li><li>Choose the wisest response. Wise choices win 💎 gems and open the gate.</li><li>Weak choices and crashes cost a ❤️ heart. Lose all five and the guardian catches you, but you still get your report.</li><li>Escape to discover your <b>CFO Readiness</b> across leadership behaviour and financial judgement.</li></ol></div>
+<div class="card"><b>🧑‍🎓 Player details</b><label>Full name</label><input id="n" placeholder="Your name">
+<div class="row"><div><label>Age</label><input id="a" type="number" inputmode="numeric" min="15" max="80"></div><div><label>Work status</label><select id="w"><option>Student</option><option>Working professional</option><option>Entrepreneur</option><option>Looking for work</option></select></div></div>
+<label>Undergraduate (UG) degree</label><input id="u" placeholder="e.g. B.Com">
+<label>Postgraduate (PG) degree</label><input id="p" placeholder="e.g. MBA Finance, or None">
+<label>Current work / company</label><input id="k" placeholder="Role and organisation">
+<label>Email</label><input id="e" type="email" placeholder="you@email.com"><label>Phone</label><input id="ph" type="tel" placeholder="Phone number">
+<p id="err" style="color:#ff9bb3;margin:6px 0 0"></p><button class="big" id="go">Enter the Temple 🏃</button></div>
+<div class="card hide" id="adm"><button class="big" id="dash">📋 Host dashboard (player records)</button></div>`;
+$('#go').onclick=()=>{sfx.click();const g=i=>$(i).value.trim();P={name:g('#n'),age:g('#a'),work:g('#w'),ug:g('#u'),pg:g('#p'),job:g('#k'),email:g('#e'),phone:g('#ph')};
+if(!P.name||!P.age||!/^\S+@\S+\.\S+$/.test(P.email)||P.phone.length<7){$('#err').textContent='Please add name, age, a valid email and phone to continue.';sfx.hurt();return}start()};
+$('#dash').onclick=dashboard;admCheck()}
+async function admCheck(){try{if(usr&&usr.canEdit())$('#adm').classList.remove('hide')}catch(e){}}
+let R,raf,cv,c2;
+const SKY=[['#ff9a8b','#ffd27a'],['#6dd5ed','#d4fff6'],['#f6d365','#fda085'],['#a18cd1','#fbc2eb'],['#2c3e92','#ff7eb3'],['#0f2027','#3a8f8f']],W=640,G=215;
+function start(){st={i:0,hearts:5,gems:0,ob:0,fin:0,obMax:0,finMax:0,log:[],playing:true,
+      traits:{leadership:0,financial:0,risk:0,ethics:0,communication:0,adaptability:0,teamwork:0},
+      traitMax:{leadership:0,financial:0,risk:0,ethics:0,communication:0,adaptability:0,teamwork:0},
+      answered:0,timedOut:0,timeSpent:0,currentStarted:0,timer:null,timeLimit:20};bg(true);runScreen()}
+function hud(){$('#hh').textContent='❤️'.repeat(st.hearts)+'🖤'.repeat(5-st.hearts);$('#gg').textContent='💎'.repeat(st.gems)||'💎 –';$('#tk').innerHTML=GATES.map((_,i)=>`<div class="stone ${i<st.i?'on':''}"></div>`).join('')}
+function runScreen(){app.innerHTML=`<div class="hud"><span id="hh"></span><span id="gg"></span></div><div class="track" id="tk"></div><canvas id="cv" width="640" height="260" style="width:100%;display:block;border-radius:22px;border:2px solid #ffffff33;touch-action:none"></canvas><button class="big" id="jp">⬆️ JUMP</button><p class="sub" style="margin-top:8px">Tap, press Space or ↑ to jump. Dodge 🪨 and 🐍, grab 🪙, reach each gate!</p><div id="q"></div>`;
+cv=$('#cv');c2=cv.getContext('2d');R={x:0,y:0,vy:0,obs:[],coins:[],t:0,mode:'run',inv:0,dist:0,gx:null,sp:0,nx:300};hud();cancelAnimationFrame(raf);loop();
+const j=e=>{if(e)e.preventDefault();if(R.mode=='run'&&R.y==0){R.vy=10.5;tone(700,.12,'square',.06)}};
+cv.onpointerdown=j;$('#jp').onpointerdown=j;document.onkeydown=e=>{if(e.code=='Space'||e.code=='ArrowUp')j(e)}}
+function hills(f,col,h,per){c2.fillStyle=col;c2.beginPath();c2.moveTo(0,G);const off=(R.x*f)%per;for(let x=-off-per;x<W+per;x+=per){c2.lineTo(x,G);c2.lineTo(x+per/2,G-h);c2.lineTo(x+per,G)}c2.lineTo(W,G);c2.fill()}
+function man(x,y,t,air){const c=c2;c.save();c.translate(x,y);const a=air?.6:Math.sin(t*.35)*.9;c.lineCap='round';c.lineWidth=7;c.strokeStyle='#2b1f5c';
+[1,-1].forEach(s=>{c.beginPath();c.moveTo(0,-26);c.lineTo(Math.sin(a*s)*18+3,-26+Math.cos(a*s)*26);c.stroke()});
+c.fillStyle='#e63946';c.beginPath();c.moveTo(-6,-52);c.quadraticCurveTo(-30,-50+Math.sin(t*.4)*7,-40,-28+Math.sin(t*.4)*5);c.lineTo(-6,-30);c.fill();
+c.fillStyle='#2ec4b6';c.fillRect(-15,-50,8,18);c.fillStyle='#ffb703';c.fillRect(-8,-54,16,30);
+c.strokeStyle='#ffcf9f';c.lineWidth=5;[1,-1].forEach(s=>{c.beginPath();c.moveTo(0,-48);c.lineTo(10+Math.sin(a*s)*12,-38+Math.cos(a*s)*6);c.stroke()});
+c.fillStyle='#ffcf9f';c.beginPath();c.arc(2,-65,10,0,7);c.fill();c.fillStyle='#3b1d0a';c.beginPath();c.arc(1,-67,10,3.3,6.1);c.fill();c.fillStyle='#ff5d8f';c.fillRect(-8,-69,20,4);c.fillStyle='#222';c.beginPath();c.arc(7,-65,2,0,7);c.fill();c.restore()}
+function draw(){const c=c2,g=c.createLinearGradient(0,0,0,G),k=SKY[st.i%6];g.addColorStop(0,k[0]);g.addColorStop(1,k[1]);c.fillStyle=g;c.fillRect(0,0,W,260);
+c.fillStyle='#fff3b0';c.beginPath();c.arc(520,55,28,0,7);c.fill();hills(.15,'#8a4fa8',110,300);hills(.35,'#5b2a86',70,200);
+for(let x=-((R.x*.6)%260)-260;x<W+260;x+=260){c.fillStyle='#3a1b5c';c.fillRect(x+30,G-90,16,90);c.fillRect(x+34,G-100,8,10);c.fillStyle='#2e8b57';c.beginPath();c.arc(x+130,G-60,26,0,7);c.fill();c.fillRect(x+127,G-60,6,60)}
+c.fillStyle='#7a4121';c.fillRect(0,G,W,45);const o=R.x%60;for(let x=-o;x<W;x+=60){c.fillStyle='#8f5026';c.fillRect(x,G,30,45)}c.fillStyle='#c9812f';c.fillRect(0,G,W,5);
+c.textBaseline='bottom';c.textAlign='center';
+R.coins.forEach(q=>{c.font='24px serif';c.fillText('🪙',q.x,G-q.h+12)});R.obs.forEach(q=>{c.font='36px serif';c.fillText(q.k?'🐍':'🪨',q.x+17,G+6)});
+if(R.gx!=null){const x=R.gx;c.fillStyle='#3a1b5c';c.fillRect(x-45,G-130,90,130);c.beginPath();c.arc(x,G-130,45,3.14,0);c.fill();c.fillStyle='#ffb703';c.fillRect(x-33,G-118,66,118);c.fillStyle='#1b0f3a';c.fillRect(x-24,G-100,48,100);c.font='34px serif';c.fillText(GATES[st.i].icon,x,G-120);c.font='bold 13px sans-serif';c.fillStyle='#fff';c.fillText(GATES[st.i].name,x,G-140)}
+if(!(R.inv>0&&R.t%8<4))man(115,G-R.y,R.t,R.y>0)}
+function loop(){raf=requestAnimationFrame(loop);R.t++;
+if(R.mode=='run'){R.x+=5;R.dist+=5;R.sp+=5;if(R.y>0||R.vy>0){R.vy-=.6;R.y+=R.vy;if(R.y<=0){R.y=0;R.vy=0}}if(R.inv>0)R.inv--;
+if(R.dist<950&&R.sp>R.nx){R.sp=0;R.nx=270+Math.random()*180;R.obs.push({x:700,k:Math.random()<.5});for(let i=0;i<3;i++)R.coins.push({x:690+i*30,h:50+(i==1?24:0)})}
+if(R.dist>=1200&&R.gx==null)R.gx=720;
+R.obs.forEach(q=>q.x-=5);R.coins.forEach(q=>q.x-=5);if(R.gx!=null)R.gx-=5;R.obs=R.obs.filter(q=>q.x>-60);R.coins=R.coins.filter(q=>q.x>-30);
+R.coins=R.coins.filter(q=>{if(Math.abs(q.x-115)<22&&Math.abs(q.h-(R.y+32))<42){sfx.gem();return false}return true});
+if(!R.inv&&R.obs.some(q=>q.x<128&&q.x+30>102&&R.y<26)){st.hearts--;R.inv=70;sfx.hurt();hud();if(st.hearts<=0){cancelAnimationFrame(raf);finish();return}}
+if(R.gx!=null&&R.gx<=200){R.mode='gate';R.y=0;ask()}}
+draw()}
+function ask(){
+const g=GATES[st.i],opts=shuf(g.o);
+$('#jp').style.display='none';
+st.currentStarted=Date.now();
+let left=st.timeLimit;
+$('#q').innerHTML=`<div class="card">
+<span class="tag">${g.icon} ${g.name}</span> <span class="tag">${g.topic}</span>
+<div class="timerBox"><div class="timerTop"><span>⏳ Decision time</span><span id="timerText">${left}s</span></div><div class="timerBar"><i id="timerFill"></i></div></div>
+<p style="font-size:1.08rem;line-height:1.5">${g.q}</p>
+<p class="sub" style="font-size:.8rem">There is no universally right answer. Your choice reveals your decision style.</p>
+${opts.map((o,i)=>`<button class="opt" data-i="${i}">${o[0]}</button>`).join('')}
+<div id="fb"></div></div>`;
+$('#q').scrollIntoView({behavior:'smooth'});
+document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>pick(g,opts[+b.dataset.i],b,false));
+clearInterval(st.timer);
+st.timer=setInterval(()=>{
+  left--;
+  const pct=Math.max(0,left/st.timeLimit*100);
+  const t=$('#timerText'),f=$('#timerFill');
+  if(t)t.textContent=left+'s';
+  if(f)f.style.width=pct+'%';
+  if(left<=0){
+    clearInterval(st.timer);
+    if(st.playing) pick(g,null,null,true);
+  }
+},1000);
+}
+function pick(g,o,b,timedOut=false){
+if(!st.playing)return;
+clearInterval(st.timer);
+document.querySelectorAll('.opt').forEach(x=>x.onclick=null);
+
+const elapsed=Math.min(st.timeLimit,Math.max(0,(Date.now()-st.currentStarted)/1000));
+st.timeSpent+=elapsed;
+st.answered++;
+
+if(timedOut){
+  st.timedOut++;
+  st.hearts--;
+  sfx.hurt();
+  st.log.push({
+    questionNo: st.i + 1,
+    gate: g.name,
+    topic: g.topic,
+    question: g.q,
+    selectedAnswer: 'TIME OUT',
+    targetAnswer: '',
+    score: null,
+    timedOut: true,
+    time: st.timeLimit,
+    feedback: 'Decision timed out under time pressure.'
+  });
+  $('#fb').innerHTML=`<div class="fb">⏰ Time ran out. The game records this as a <b>decision-under-time-pressure signal</b>, not a wrong answer. You lost one ❤️ because the temple required a decision.</div>
+  <button class="big" id="nx">${st.i<GATES.length-1&&st.hearts>0?'Keep running ➜':'See my analysis 🏁'}</button>`;
+  hud();
+}else{
+  const s=o[1];
+  // Existing option scores are retained as intensity only; no option is labeled right/wrong.
+  // Higher values represent stronger alignment with the game's target competency for that scenario.
+  if(g.t==='ob'){st.ob+=s;st.obMax+=2}else{st.fin+=s;st.finMax+=2}
+
+  // Scenario-to-trait mapping. The selected intensity becomes evidence for the trait profile.
+  const topic=g.topic;
+  const map={
+    'Motivation & Workload':['leadership','teamwork','communication'],
+    'Working Capital':['financial','risk'],
+    'Conflict Management':['leadership','communication','teamwork'],
+    'Capital Budgeting & Risk':['financial','risk'],
+    'Ethics & Integrity':['ethics','leadership'],
+    'Capital Structure':['financial','risk'],
+    'Leadership Style':['leadership','adaptability','teamwork'],
+    'Budget Variance':['financial','adaptability'],
+    'Teamwork & Communication':['teamwork','communication'],
+    'Dividend & Retention Policy':['financial','risk','communication'],
+    'Managing Change':['adaptability','leadership','communication'],
+    'Foreign Exchange Risk':['financial','risk'],
+    'Performance Appraisal & Equity':['leadership','ethics','communication'],
+    'Internal Controls & Fraud Risk':['financial','ethics','risk'],
+    'Decision Biases':['adaptability','risk','financial']
+  };
+  const traits=map[topic]||['leadership'];
+  traits.forEach((tr,idx)=>{
+    const weight=idx===0?1:(idx===1?.8:.65);
+    st.traits[tr]+=s*weight;
+    st.traitMax[tr]+=2*weight;
+  });
+
+  const feedback = o[2] || 'This choice adds useful evidence about your decision style.';
+  st.log.push({
+    questionNo: st.i + 1,
+    gate: g.name,
+    topic: g.topic,
+    question: g.q,
+    selectedAnswer: o[0],
+    targetAnswer: g.o[0][0],
+    score: s,
+    timedOut: false,
+    time: elapsed,
+    feedback: feedback
+  });
+  if(s===2){st.gems++;sfx.gem()}
+  else if(s===1){sfx.ok()}
+  else{sfx.hurt();cv.classList.add('shake')}
+  hud();
+
+  // Feedback is reflective rather than "correct/incorrect".
+  $('#fb').innerHTML=`<div class="fb">🧭 <b>Decision insight:</b> ${feedback}<br><span class="tag">Choice recorded for your personal CFO profile</span></div>
+  <button class="big" id="nx">${st.i<GATES.length-1&&st.hearts>0?'Keep running ➜':'See my analysis 🏁'}</button>`;
+}
+$('#nx').onclick=()=>{sfx.click();st.i++;if(st.i>=GATES.length||st.hearts<=0){cancelAnimationFrame(raf);finish();return}
+R.mode='run';R.gx=null;R.dist=0;R.sp=0;R.obs=[];R.coins=[];R.inv=60;$('#q').innerHTML='';$('#jp').style.display='';cv.classList.remove('shake');hud();window.scrollTo({top:0,behavior:'smooth'})};
+}
+const lvl=r=>r>=.8?['Excellent','linear-gradient(90deg,#2ec4b6,#9bf6ff)']:r>=.5?['Promising','linear-gradient(90deg,#ffb703,#ffd166)']:['Needs growth','linear-gradient(90deg,#ff5d8f,#ff9bb3)'];
+async function finish(){
+cancelAnimationFrame(raf);document.onkeydown=null;clearInterval(st.timer);st.playing=false;bg(false);
+
+const ro=st.obMax?st.ob/st.obMax:0,rf=st.finMax?st.fin/st.finMax:0;
+const overall=(ro+rf)/2;
+const escaped=st.hearts>0&&st.i>=GATES.length;
+
+const traitNames={
+ leadership:'Leadership & Ownership',
+ financial:'Financial Judgement',
+ risk:'Risk Awareness',
+ ethics:'Ethics & Integrity',
+ communication:'Communication',
+ adaptability:'Adaptability',
+ teamwork:'Teamwork & People Management'
+};
+const traitScores={};
+Object.keys(st.traits).forEach(k=>{
+  traitScores[k]=st.traitMax[k]?Math.round(st.traits[k]/st.traitMax[k]*100):0;
+});
+const sorted=Object.entries(traitScores).sort((a,b)=>b[1]-a[1]);
+const strengths=sorted.slice(0,3);
+const weaknesses=sorted.slice(-3).reverse();
+
+const band=p=>p>=80?'Strong':p>=65?'Developing Strength':p>=50?'Emerging':'Growth Area';
+const fit=overall>=.8?'Strong CFO potential':overall>=.65?'Promising CFO potential':overall>=.5?'Developing CFO potential':'Early-stage CFO potential';
+
+const review={
+ leadership:'You tend to take ownership, influence others and handle people decisions.',
+ financial:'Your choices show how comfortably you balance cash, returns, capital and business trade-offs.',
+ risk:'Your profile reflects how deliberately you identify uncertainty before acting.',
+ ethics:'Your decisions reveal how strongly you protect fairness, transparency and professional integrity.',
+ communication:'Your choices indicate how much you rely on clarity, alignment and stakeholder dialogue.',
+ adaptability:'This reflects how comfortably you adjust your approach when situations or people change.',
+ teamwork:'This reflects your ability to create shared ownership instead of carrying everything alone.'
+};
+const improve={
+ leadership:'Practise delegating, coaching and making difficult calls with clear accountability.',
+ financial:'Build deeper practice with valuation, working capital, forecasting and capital-allocation cases.',
+ risk:'Use scenario analysis, downside thinking and explicit risk limits before committing.',
+ ethics:'Keep strengthening your ability to challenge pressure respectfully and document transparent alternatives.',
+ communication:'Practise concise stakeholder communication, negotiation and explaining the “why” behind decisions.',
+ adaptability:'Expose yourself to unfamiliar cases and deliberately test more than one approach before deciding.',
+ teamwork:'Work on role clarity, feedback, conflict resolution and shared accountability.'
+};
+
+P.result=fit;
+P.behaviour=band(ro);
+P.finance=band(rf);
+P.escaped=escaped?'Escaped':'Caught';
+P.score=Math.round(overall*100);
+P.timeLimit=st.timeLimit;
+P.timedOut=st.timedOut;
+P.answered=st.answered;
+P.avgDecisionTime=st.answered?Math.round(st.timeSpent/st.answered*10)/10:0;
+P.strengths=strengths.map(x=>traitNames[x[0]]).join(' | ');
+P.growthAreas=weaknesses.map(x=>traitNames[x[0]]).join(' | ');
+P.traitScores=JSON.stringify(traitScores);
+P.when=new Date().toISOString();
+
+escaped?sfx.win():sfx.hurt();
+
+app.innerHTML=`<h1>${escaped?'🎉 You escaped!':'😵 The guardian caught you!'}</h1>${scene(escaped?'🌅':'🗿',escaped?85:20)}
+<div class="card" style="text-align:center">
+<div style="font-size:1.55rem;font-weight:800">${fit}</div>
+<p>Your <b>CFO Decision Profile</b> is based on the patterns in your choices — not on a simple right/wrong test.</p>
+<div style="font-size:2.1rem;font-weight:900">${P.score}/100</div>
+<p class="sub">Overall decision-readiness score</p>
+<p>${'💎'.repeat(st.gems)||'No gems this time'} ${st.timedOut?`· ⏰ ${st.timedOut} timed-out decision${st.timedOut>1?'s':''}`:''}</p>
+</div>
+
+<div class="card"><b>📊 Your competency profile</b>
+<div class="analysisGrid">
+${sorted.map(([k,v])=>`<div class="metric"><b>${traitNames[k]}</b><span class="tag">${v}% · ${band(v/100)}</span><div class="bar"><i style="width:${Math.max(5,v)}%;background:linear-gradient(90deg,#2ec4b6,#ffb703)"></i></div></div>`).join('')}
+</div></div>
+
+<div class="card"><b>💪 Your strengths</b>
+${strengths.map(([k,v])=>`<div class="fb"><b>${traitNames[k]} — ${v}%</b><br>${review[k]}</div>`).join('')}</div>
+
+<div class="card"><b>🛠️ Areas to work on</b>
+${weaknesses.map(([k,v])=>`<div class="fb"><b>${traitNames[k]} — ${v}%</b><br>${improve[k]}</div>`).join('')}</div>
+
+<div class="card"><b>🧠 What your decisions suggest</b>
+<p>${overall>=.65?'You show a useful base for CFO-style decision making: you are already demonstrating several behaviours that matter in ambiguous business situations.':'Your profile is still developing, which is completely compatible with a learning game. The useful part is identifying which decision behaviours you can deliberately practise next.'}</p>
+<p><b>Organizational behaviour:</b> ${band(ro)} (${Math.round(ro*100)}%)</p>
+<p><b>Financial management:</b> ${band(rf)} (${Math.round(rf*100)}%)</p>
+<p><b>Decision speed:</b> ${st.timedOut?'You had '+st.timedOut+' decision(s) where the timer ran out.':'You completed every timed decision.'} Average recorded response time: ${P.avgDecisionTime}s.</p>
+</div>
+
+<div class="card"><b>🎯 CFO development recommendation</b>
+<p>Focus first on <b>${traitNames[weaknesses[0][0]]}</b>, then reinforce <b>${traitNames[weaknesses[1][0]]}</b>. Your strongest current signal is <b>${traitNames[strengths[0][0]]}</b>.</p>
+<p class="sub">This is a behavioural game analysis, not a professional aptitude or hiring assessment.</p></div>
+
+<div class="card" id="sv">Saving your record…</div><button class="big" id="again">Play again 🔁</button>`;
+$('#again').onclick=home;
+await save();
+}
+async function save(){const rec={...P,sessionId:'CFO-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),answers:st.log};let ok=false;
+try{const k='cfoPlayers',a=JSON.parse(localStorage.getItem(k)||'[]');a.push(rec);localStorage.setItem(k,JSON.stringify(a))}catch(e){}
+try{
+if(SHEET_URL)await fetch(SHEET_URL,{
+method:'POST',
+mode:'no-cors',
+headers:{'Content-Type':'text/plain;charset=utf-8'},
+body:JSON.stringify(rec),
+keepalive:true
+});
+}catch(e){}
+try{if(db){await db.collection('players').doc('p'+Date.now()+Math.random().toString(36).slice(2,6)).set(rec);ok=true}}catch(e){}
+$('#sv').innerHTML=(ok||SHEET_URL)?'✅ Your result has been recorded. Thank you for playing!':'🎮 Result ready. (Central recording needs the host to give you contributor access.)'}
+async function dashboard(){let rows=[];try{const s=await db.collection('players').get();rows=s.docs.map(d=>d.data())}catch(e){}
+const cols=['name','age','work','ug','pg','job','email','phone','result','score','behaviour','finance','strengths','growthAreas','timedOut','avgDecisionTime','traitScores','escaped','when'];
+app.innerHTML=`<h1>📋 Players</h1><div class="card"><p class="sub">${rows.length?'Players recorded: '+rows.length:'No players recorded yet.'}</p><button class="big" id="csv">⬇️ Download CSV (open in Google Sheets)</button><button class="big" id="bk">⬅ Back</button></div><div class="card wrap"><table><tr>${cols.map(c=>`<th>${c}</th>`).join('')}</tr>${rows.map(r=>`<tr>${cols.map(c=>`<td>${String(r[c]??'').replace(/[<>&]/g,'')}</td>`).join('')}</tr>`).join('')}</table></div>`;
+$('#bk').onclick=home;
+$('#csv').onclick=async()=>{const q=v=>'"'+String(v??'').replace(/"/g,'""').replace(/^([=+\-@])/,"'$1")+'"';
+const csv=[cols.join(',')].concat(rows.map(r=>cols.map(c=>q(r[c])).join(','))).join('\n');
+try{const d=await claude.use('downloads');await d.save({filename:'cfo-escape-players.csv',data:csv})}catch(e){}}}
+home();
+(async()=>{try{if(window.claude){db=await claude.use('db');usr=await claude.use('user');admCheck()}}catch(e){}})();
+</script>
+</body></html>
